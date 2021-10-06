@@ -1,12 +1,12 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: ingress-demo-disallowed
+  name: nginx
   annotations:
-    runterrascan.io/skip: "[{\"rule\": \"AC-K8-NS-IN-H-0020\", \"comment\": \"reason to skip the rule\"}]"
+    runterrascan.io/skip: "[{\"rule\": \"AC-K8-IA-PO-H-0168\",\"AC-K8-IA-PO-M-0135\",\"AC-K8-IA-PO-M-0140\", \"comment\": \"reason to skip the rule\"}]"
 spec:
   rules:
-    - host: example-host.example.com
+    - host: http://localhost:31363/
       http:
         paths:
           - backend:
