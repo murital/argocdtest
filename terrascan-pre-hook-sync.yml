@@ -4,7 +4,6 @@ metadata:
   generateName: terrascan-hook-
   annotations:
     argocd.argoproj.io/hook: PreSync
-    runterrascan.io/skip: "[{\"rule\": \"AC-K8-IA-PO-H-0168\",\"AC-K8-IA-PO-M-0135\",\"AC-K8-IA-PO-M-0140\",\"AC-K8-OE-PK-M-0155\",\"AC-K8-OE-PO-L-0134\",\"AC-K8-NS-SV-L-0132\",\"AC-K8-OE-PK-M-0156\",\"AC-K8-OE-PK-M-0157\",\"AC-K8-OE-PK-M-0158\",\"AC-K8-OE-PO-L-0129\",\"AC-K8-OE-PO-L-0130\",\"AC-K8-CA-PO-H-0165\",\"AC-K8-NS-PO-M-0122\",\"AC-K8-NS-PO-M-0133\"comment\": \"reason to skip the rule\"}]"
 spec:
   ttlSecondsAfterFinished: 60
   template:
