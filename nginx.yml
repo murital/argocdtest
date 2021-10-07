@@ -18,5 +18,5 @@ spec:
       - image: nginx
         name: nginx
         envFrom:
-          - ConfigMapRef:
+          - conFigMapRef:
             name: skip-rule
