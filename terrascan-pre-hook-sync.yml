@@ -17,6 +17,6 @@ spec:
           /go/bin/terrascan scan -r git -u https://github.com/harkirat22/vulnerable-k8s-argo-terrascan-demo.git -i k8s -t k8s
         envFrom:
           - conFigMapRef:
-            name: skip-rule
+              name: skip-rule
       restartPolicy: Never
   backoffLimit: 1
