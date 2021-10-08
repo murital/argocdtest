@@ -5,16 +5,16 @@ metadata:
 data:
   skip-rules:
       AC-K8-IA-PO-H-0168
-      AC-K8-IA-PO-M-0135
-      AC-K8-IA-PO-M-0140
-      AC-K8-OE-PK-M-0155
-      AC-K8-OE-PO-L-0134
-      AC-K8-NS-SV-L-0132
-      AC-K8-OE-PK-M-0156
-      AC-K8-OE-PK-M-0157
-      AC-K8-OE-PK-M-0158
-      AC-K8-OE-PO-L-0129
-      AC-K8-OE-PO-L-0130
-      AC-K8-CA-PO-H-0165
-      AC-K8-NS-PO-M-0122
-      AC-K8-NS-PO-M-0133
+      AC_K8S_0078
+      AC_K8S_0097
+      AC_K8S_0069
+      AC_K8S_0064
+      AC_K8S_0068
+      AC_K8S_0093
+      AC_K8S_0098
+      AC_K8S_0099
+      AC_K8S_0100
+      AC_K8S_0070
+      AC_K8S_0072
+      AC_K8S_0085
+      AC_K8S_0111
