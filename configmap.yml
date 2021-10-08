@@ -3,8 +3,9 @@ kind: ConfigMap
 metadata:
   name: skip-rule
 data:
-  rules:
+  rules: |
      skip-rules: 
         - AC-K8-IA-PO-H-0168
         - AC_K8S_0078
-    
+        - AC_K8S_0097
+        - AC_K8S_0069
