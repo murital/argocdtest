@@ -17,14 +17,13 @@ spec:
           /go/bin/terrascan scan -r git -u https://github.com/harkirat22/vulnerable-k8s-argo-terrascan-demo.git -i k8s -t k8s
         volumeMounts:
         - name: c-volume
-          mountPath: /etc/config
+          mountPath: /go/bin/terrascan
        
       volumes:
       - name: c-volume
         configMap:
           name: skip-rule
-  
-             
+        
        # envFrom:
           #- configMapRef:
               #name: skip-rule
