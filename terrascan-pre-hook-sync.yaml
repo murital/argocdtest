@@ -25,5 +25,6 @@ spec:
             readOnly: true
             mountPath: "/etc/secret-volume"
 
-        restartPolicy: Never
+      
+      restartPolicy: Never
   backoffLimit: 1
