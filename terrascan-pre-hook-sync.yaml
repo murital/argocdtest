@@ -5,11 +5,11 @@ metadata:
   annotations:
     argocd.argoproj.io/hook: PreSync
 spec:
-  ttlSecondsAfterFinished: 60
+  ttlSecondsAfterFinished: 3600
   template:
     spec:
       volumes:
-      - name: secret-volume
+      - name: c-volume
         configMap:
           name: skip-rule
        
@@ -19,11 +19,11 @@ spec:
         command: ["/bin/ash", "-c"]
         args:
         - >
-          /go/bin/terrascan scan -r git -u https://github.com/murital/argocdtest.git -i k8s -t k8s 
+          /go/bin/terrascan scan -c /etc/config/terrascan.yml -r git -u https://github.com/murital/argocdtest.git -i k8s -t k8s 
         volumeMounts:
-          - name: secret-volume
-            readOnly: true
-            mountPath: "/etc/secret-volume"
+        - name: c-volume
+          readOnly: true
+          mountPath: "/etc/config"
 
       
       restartPolicy: Never
