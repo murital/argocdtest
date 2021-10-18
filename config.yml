@@ -1,0 +1,33 @@
+#severity:
+#level:
+ # medium
+
+
+rules:
+    #scan-rules:
+    skip-rules:
+      - AC_K8S_0087
+      - AC_K8S_0078
+      - AC_K8S_0097
+      - AC_K8S_0069
+      - AC_K8S_0064
+      - AC_K8S_0068
+      - AC_K8S_0093
+      - AC_K8S_0098
+      - AC_K8S_0099
+      - AC_K8S_0100
+      - AC_K8S_0070
+      - AC_K8S_0072
+      - AC_K8S_0085
+      - AC_K8S_0111
+      - AC_K8S_0073
+      - AC_K8S_0080
+
+
+
+      
+#k8s-admission-control:
+ #   - denied-categories:
+  #      Network Ports Security
+    
+#denied-severity: high
