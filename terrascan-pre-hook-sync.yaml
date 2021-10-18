@@ -1,0 +1,30 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  generateName: terrascan-hook-
+  annotations:
+    argocd.argoproj.io/hook: PreSync
+spec:
+  ttlSecondsAfterFinished: 3600
+  template:
+    spec:
+      volumes:
+      - name: c-volume
+        configMap:
+          name: skip-rule
+       
+      containers:
+      - name: terrascan-argocd
+        image: accurics/terrascan:latest
+        command: ["/bin/ash", "-c"]
+        args:
+        - >
+          /go/bin/terrascan scan -c /etc/config/terrascan.yml -r git -u https://github.com/murital/argocdtest.git -i k8s -t k8s 
+        volumeMounts:
+        - name: c-volume
+          readOnly: true
+          mountPath: "/etc/config"
+
+      
+      restartPolicy: Never
+  backoffLimit: 1

@@ -1,0 +1,24 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: skip-rule
+data:
+  terrascan.yml: |
+    rules:
+      skip-rules: 
+          - AC_K8S_0087
+          - AC_K8S_0078
+          - AC_K8S_0097
+          - AC_K8S_0069
+          - AC_K8S_0064
+          - AC_K8S_0068
+          - AC_K8S_0093
+          - AC_K8S_0098
+          - AC_K8S_0099
+          - AC_K8S_0100
+          - AC_K8S_0070
+          - AC_K8S_0072
+          - AC_K8S_0085
+          - AC_K8S_0111
+          - AC-K8-IA-PO-M-0141
+          - AC-K8-IA-PO-M-0135
