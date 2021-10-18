@@ -4,14 +4,39 @@ metadata:
   generateName: terrascan-hook-
   annotations:
     argocd.argoproj.io/hook: PreSync
+    runterrascan.io/skip: "[{\"rule\": \"AC_K8S_0087\"},{\"rule\": \"AC_K8S_0078\"},{\"rule\": \"AC_K8S_0097\"},{\"rule\": \"AC_K8S_0069\"},{\"rule\": \"AC_K8S_0069\"},{\"rule\": \"AC_K8S_0068\"},{\"rule\": \"AC_K8S_0093\"},{\"rule\": \"AC_K8S_0098\"},{\"rule\": \"AC_K8S_0099\"}, {\"rule\": \"AC_K8S_0100\"},{\"rule\": \"AC_K8S_0070\"},{\"rule\": \"AC_K8S_0072\"}, {\"rule\": \"AC_K8S_0085\"},{\"rule\": \"AC_K8S_0111\"},{\"rule\": \"AC-K8-IA-PO-M-0135\"},{\"rule\": \"AC-K8-IA-PO-M-0141\"},{\"rule\": \"AC-K8-NS-PO-M-0122\"}]"
+    #runterrascan.io/skip:
+    #   #- rule: AC_K8S_0087
+    #  # - rule: AC_K8S_0078
+    #   - rule: AC_K8S_0097
+    #   - rule: AC_K8S_0069
+    #   - rule: AC_K8S_0064
+    #   - rule: AC_K8S_0068
+    #   - rule: AC_K8S_0093
+    #   - rule: AC_K8S_0098
+    #   - rule: AC_K8S_0099
+    #   - rule: AC_K8S_0100
+    #   - rule: AC_K8S_0070
+    #   - rule: AC_K8S_0072
+    #   - rule: AC_K8S_0085
+    #   - rule: AC_K8S_0111
+    #   - rule: AC-K8-IA-PO-M-0141
+    #   - rule: AC-K8-IA-PO-M-0135
+
+     
 spec:
-  ttlSecondsAfterFinished: 3600
+  ttlSecondsAfterFinished: 60
   template:
+    metadata:
+      annotations:
+        terrascanSkip: "[{\"rule\": \"AC_K8S_0087\"},{\"rule\": \"AC_K8S_0078\"},{\"rule\": \"AC_K8S_0097\"},{\"rule\": \"AC_K8S_0069\"},{\"rule\": \"AC_K8S_0069\"},{\"rule\": \"AC_K8S_0068\"},{\"rule\": \"AC_K8S_0093\"},{\"rule\": \"AC_K8S_0098\"},{\"rule\": \"AC_K8S_0099\"}, {\"rule\": \"AC_K8S_0100\"},{\"rule\": \"AC_K8S_0070\"},{\"rule\": \"AC_K8S_0072\"}, {\"rule\": \"AC_K8S_0085\"},{\"rule\": \"AC_K8S_0111\"},{\"rule\": \"AC-K8-IA-PO-M-0135\"},{\"rule\": \"AC-K8-IA-PO-M-0141\"}]"
     spec:
       volumes:
       - name: c-volume
         configMap:
           name: skip-rule
+    
+
        
       containers:
       - name: terrascan-argocd

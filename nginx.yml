@@ -4,11 +4,31 @@ metadata:
   labels:
     app: nginx
   name: nginx
+  annotations:
+   # terrascanSkip: "[{\"rule\": \"AC_K8S_0087"\, \"AC_K8S_0078"\, \"AC_K8S_0097"\, \"AC_K8S_0069"\, \"AC_K8S_0064"\, \"AC_K8S_0068"\, \"AC_K8S_0093"\, \"AC_K8S_0098"\, \"AC_K8S_0099"\, \"AC_K8S_0100"\, \"AC_K8S_0070"\, \"AC_K8S_0072"\, \"AC_K8S_0085"\, \"AC_K8S_0111"\, \"AC-K8-IA-PO-M-0141"\, \"AC-K8-IA-PO-M-0135"\, \"comment\": \"skip rules applies\" }]"
+    runterrascan.io/skip: "[{\"rule\": \"AC_K8S_0087\"},{\"rule\": \"AC_K8S_0078\"},{\"rule\": \"AC_K8S_0097\"},{\"rule\": \"AC_K8S_0069\"},{\"rule\": \"AC_K8S_0069\"},{\"rule\": \"AC_K8S_0068\"},{\"rule\": \"AC_K8S_0093\"},{\"rule\": \"AC_K8S_0098\"},{\"rule\": \"AC_K8S_0099\"}, {\"rule\": \"AC_K8S_0100\"},{\"rule\": \"AC_K8S_0070\"},{\"rule\": \"AC_K8S_0072\"}, {\"rule\": \"AC_K8S_0085\"},{\"rule\": \"AC_K8S_0111\"},{\"rule\": \"AC_K8S_0073\"},{\"rule\": \"AC_K8S_0080\"},{\"rule\": \"AC-K8-NS-PO-M-0122\"}]"
+        # - rule: AC_K8S_0087
+        # - rule: AC_K8S_0078
+        # - rule: AC_K8S_0097
+        # - rule: AC_K8S_0069
+        # - rule: AC_K8S_0064
+        # - rule: AC_K8S_0068
+        # - rule: AC_K8S_0093
+        # - rule: AC_K8S_0098
+        # - rule: AC_K8S_0099
+        # - rule: AC_K8S_0100
+        # - rule: AC_K8S_0070
+        # - rule: AC_K8S_0072
+        # - rule: AC_K8S_0085
+        # - rule: AC_K8S_0111
+        # - rule: AC-K8-IA-PO-M-0141
+        # - rule: AC-K8-IA-PO-M-0135
+
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
-      app: nginx
+      app: nginx    
   template:
     metadata:
       labels:
