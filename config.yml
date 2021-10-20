@@ -1,8 +1,3 @@
-#severity:
-#level:
- # medium
-
-
 rules:
     #scan-rules:
     skip-rules:
@@ -22,12 +17,3 @@ rules:
       - AC_K8S_0111
       - AC_K8S_0073
       - AC_K8S_0080
-
-
-
-      
-#k8s-admission-control:
- #   - denied-categories:
-  #      Network Ports Security
-    
-#denied-severity: high
