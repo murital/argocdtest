@@ -27,10 +27,10 @@ spec:
         args:
         - >
           /go/bin/terrascan scan -c /etc/config/terrascan.yml -r git -u https://github.com/murital/argocdtest.git -i k8s -t k8s 
-        volumeMounts:
-        - name: c-volume
-          readOnly: true
-          mountPath: "/etc/config"
+        # volumeMounts:
+        # - name: c-volume
+        #   readOnly: true
+        #   mountPath: "/etc/config"
 
       
       restartPolicy: Never
